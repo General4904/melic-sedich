@@ -103,6 +103,10 @@ body {
     line-height: 1;
 }
 
+h3.brand-name {
+    font-size: 0.9rem;
+}
+
 .brand-name span {
     color: var(--primary-red);
 }
