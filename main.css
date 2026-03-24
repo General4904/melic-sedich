@@ -1,0 +1,320 @@
+/* Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 1. GLOBAL SETTINGS & THEME VARIABLES --- */
+/* --- GLOBAL THEME & VARIABLES --- */
+:root {
+    --primary-red: #d32f2f;
+    --accent-yellow: #ffc107;
+    --dark-slate: #1e293b;
+    --light-bg: #f8fafc;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: var(--dark-slate);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    border-bottom: 3px solid var(--accent-yellow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-brand {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--dark-slate);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-brand span {
+    color: var(--primary-red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark-slate);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-red);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #fffef0 100%);
+    text-align: center;
+}
+
+.hero-logo-box {
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.brand-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--dark-slate);
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-name span {
+    color: var(--primary-red);
+}
+
+.brand-underline {
+    height: 5px;
+    width: 60px;
+    background: var(--accent-yellow);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.hero-tagline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.highlight {
+    color: var(--primary-red);
+    border-bottom: 4px solid var(--accent-yellow);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #475569;
+}
+
+/* Navbar Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 40px;
+    /* Adjust based on your logo shape */
+    width: auto;
+}
+
+/* Hero Center Logo */
+.main-logo-img {
+    height: 100px;
+    /* Larger logo for the middle of the page */
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- BUTTONS --- */
+.btn-primary {
+    background: var(--primary-red);
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #b71c1c;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-red);
+    color: white;
+}
+
+/* --- SERVICES --- */
+.services-section {
+    padding: 100px 0;
+    background: var(--light-bg);
+    scroll-margin-top: 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 4px solid var(--accent-yellow);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--primary-red);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+/* --- MINIMALIST CONTACT HUB --- */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.section-subtitle {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.contact-icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-icon-card i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.icon-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--dark-slate);
+    opacity: 0.6;
+}
+
+.contact-icon-card:hover {
+    transform: scale(1.15);
+}
+
+.gmail i {
+    color: #ea4335;
+}
+
+.whatsapp i {
+    color: #25d366;
+}
+
+.phone i {
+    color: var(--primary-red);
+}
+
+/* --- FOOTER --- */
+.footer-bottom {
+    background: var(--dark-slate);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    .brand-name {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-tagline {
+        font-size: 1.8rem;
+    }
+
+    .contact-icon-grid {
+        gap: 40px;
+    }
+}
